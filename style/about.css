@@ -1,0 +1,174 @@
+@import 'about.css';
+
+h1{
+    color: cadetblue;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+}
+
+h2{
+    color: rgb(221, 86, 33);
+    text-align: center;
+    height: auto;
+    font-size: 15px;
+    padding: 10px;
+    border-top:1px dotted white;
+    border-radius: 10%;
+}
+
+h3{
+    color: grey;
+    text-align: center;
+    height: auto;
+    font-size: 10px;
+    transition: background-color 0.5s;
+    transition: font-size 1.5s;
+    transition-delay: 0.1s;
+}
+
+h3:hover{
+    color: black;
+    text-align: center;
+    height: auto;
+    font-size: 20px;
+    background-color: rgb(233, 240, 24);
+    width: auto;
+}
+
+h4{
+    color: #000000;
+}
+
+p{
+    color: rgb(0, 0, 0);
+    background-color: rgba(194, 229, 229, 0.396);
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+
+#img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.page{
+    height: auto;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "header"
+    "sidebar"
+    "main"
+    "footer";
+}
+
+.header{
+    grid-area: header;
+    
+}
+
+.sidebar{
+    background-color: rgba(255, 255, 0, 0.533);
+    grid-area: sidebar;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+}
+
+.sidebar ul:hover {
+    list-style: none;
+  }
+
+  .sidebar li {
+   border-bottom: 1px solid black;
+   list-style-type: square;
+  }
+
+.main{
+    background-color:rgba(255, 235, 205, 0.266);
+    grid-area: main;
+    display: table-column;
+    width: auto;
+    height: auto;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    border-top: 5px solid snow;
+}
+
+.footer{
+    background-color: cyan;
+    grid-area: footer;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    border-top: 10px solid black;
+    border-bottom: 10px solid black;
+}
+
+.container{
+    display: grid;
+    width: auto;
+    height: auto;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 20px;
+}
+
+.section{
+    border: 5px solid black;
+    height: auto;
+    width: auto;
+    margin: auto;
+    padding: 3vh;
+    text-align: center;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+body{
+    background-image: url("../img/pexels-benjamin-suter-3617500.jpg");
+    background-size: cover;
+
+}
+
+@media(min-width:900px){
+    .page{
+        height: auto;
+        width: auto;
+        display: grid;
+        grid-template-columns: 0.3fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    
+        grid-gap: 5px;
+        border: 2px solid rgba(255, 255, 0, 0.044);
+        justify-content: center;
+    }
+}
+
+@media(min-width:720px){
+    .sidebar{
+        background-color: rgba(255, 255, 0, 0.533);
+        grid-area: sidebar;
+        border: 2px solid black;
+        border-top-left-radius: 0%;
+        position: fixed;
+        bottom: 250px;
+        height: auto;
+        width: auto;
+        margin: auto;
+        padding: 5px;
+}
+}
